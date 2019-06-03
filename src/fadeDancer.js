@@ -1,6 +1,6 @@
 var makeFadeDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-
+  this.$node.addClass('fadeDancer');
 };
 
 makeFadeDancer.prototype = Object.create(makeDancer.prototype);
