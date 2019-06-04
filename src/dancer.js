@@ -36,3 +36,10 @@ makeDancer.prototype.lineUp = function() {
   });
 };
 
+makeDancer.prototype.release = function() {
+  this.$node.finish();
+  this.$node.css( {
+    top: $('body').height() * Math.random(),
+    left: $('body').width() * Math.random()
+  });
+};

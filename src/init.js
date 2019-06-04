@@ -30,17 +30,54 @@ $(document).ready(function() {
     );
     window.dancers.push(dancer);
     $('body').append(dancer.$node);
+
   });
 
   $('.lineUpButton').on('click', function(event) {
     dancers.forEach(dancer => {
       dancer.lineUp();
     });
+    $('.lineUpButton').css({display: 'none'});
+    $('.releaseButton').show();
+  });
+
+  $('.releaseButton').on('click', function(event) {
+    dancers.forEach(dancer => {
+      dancer.release();
+    });
+    $('.releaseButton').css({display: 'none'});
+    $('.lineUpButton').show();
   });
 
   $('body').on('mouseenter', '.fadeDancer', function(event) {
-    $(this).attr('class', 'increaseSize dancer');
+    $(this).attr('class', 'increaseSize fadeDancer dancer');
   }); 
-    
+
+  $('.partnerButton').on('click', function(event) {
+    for (var i = 0; i < dancers.length - 1; i += 2) {
+      dancers[i].$node.finish();
+      console.log(dancers[i + 1].$node.css('left'));
+      var nextUpX = dancers[i + 1].$node.css('left');
+      var nextUpY = dancers[i + 1].$node.css('top');
+
+      dancers[i].$node.animate({"left" : nextUpX}, 'slow');
+      dancers[i].$node.animate({"top" : nextUpY}, 'slow');
+
+    }
+  });  
+  //   var dontSkip = true;
+  //   dancers.forEach(dancer => {
+  //     if (dontSkip) {
+  //       var index = positions.indexOf([dancer.$node.css('left'), dancer.$node.css('top')]);
+  //       dancer.$node.finish();
+  //       var partnerX = (positions[index + 1][0]).toString();
+  //       var partnerY = (positions[index + 1][1]).toString();
+  //       dancer.$node.animate({"top" : partnerY, "left" : partnerX}, 'fast');
+  //       dontSkip = false;
+  //     }        
+  //     dontSkip = true;
+  //   });
+  // });
+
 });
 

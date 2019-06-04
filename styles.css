@@ -8,19 +8,25 @@ body{
   font-family: Helvetica;
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: black;
 }
-.lineUpButton, .title, .addDancerButton{
+.partnerButton, .releaseButton, .lineUpButton, .title, .addDancerButton{
   padding:5px 12px;
   float:right;
+  color: black;
+}
+
+.releaseButton {
+  display: none; 
 }
 .topbar{
   height:32px;
-  background-color: #555;
+  background-color: white;
   z-index: 10;
 }
 .title{
-  background-color: #777;
+  background-color: white;
+  font-weight: bold;
 }
 .dancer{
   border:10px solid red;
@@ -43,6 +49,7 @@ body, a:link, a:visited, a:active{
 
 .increaseSize{
   border:100px solid blue;
+  border-radius:0px;
 }
 
 @-webkit-keyframes move{
