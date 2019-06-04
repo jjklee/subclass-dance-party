@@ -68,3 +68,7 @@ body, a:link, a:visited, a:active{
   from {transform: rotate(0deg);}
   to {transform: rotate(360deg);}
 }
+
+.audio {
+  bottom: 0px;
+}
