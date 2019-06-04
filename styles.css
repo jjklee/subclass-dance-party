@@ -3,20 +3,21 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#fff;
+  background-color:#000;
   font-size: 16px;
   font-family: Helvetica;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.lineUpButton, .title, .addDancerButton{
   padding:5px 12px;
   float:right;
 }
 .topbar{
   height:32px;
   background-color: #555;
+  z-index: 10;
 }
 .title{
   background-color: #777;
@@ -28,7 +29,12 @@ body, a:link, a:visited, a:active{
 }
 .fadeDancer{
   border:10px solid blue;
-  border-radius:10px;
-  position:absolute;
+}
+.animatedDancer{
+  border:10px solid rgb(255, 0, 149);
 }
 
+#disco{
+  text-align: center;
+  z-index: -1;
+}

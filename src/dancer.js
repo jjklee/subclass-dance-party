@@ -29,4 +29,9 @@ makeDancer.prototype.step = function() {
 
 };
 
+makeDancer.prototype.lineUp = function() {
+  this.$node.css( {
+    left: 0
+  });
+};
 
