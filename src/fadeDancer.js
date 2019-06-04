@@ -1,13 +1,13 @@
-var makeFadeDancer = function(top, left, timeBetweenSteps) {
-  makeDancer.call(this, top, left, timeBetweenSteps);
+var FadeDancer = function(top, left, timeBetweenSteps) {
+  Dancer.call(this, top, left, timeBetweenSteps);
   this.$node.addClass('fadeDancer');
 };
 
-makeFadeDancer.prototype = Object.create(makeDancer.prototype);
-makeFadeDancer.prototype.constructor = makeFadeDancer;
+FadeDancer.prototype = Object.create(Dancer.prototype);
+FadeDancer.prototype.constructor = FadeDancer;
 
-makeFadeDancer.prototype.step = function() {
-  makeDancer.prototype.step.call(this);
+FadeDancer.prototype.step = function() {
+  Dancer.prototype.step.call(this);
   this.$node.fadeOut();
   this.$node.fadeIn();
 

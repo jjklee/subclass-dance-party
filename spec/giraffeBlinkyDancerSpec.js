@@ -5,7 +5,7 @@ describe('giraffeDancer', function() {
 
   beforeEach(function() {
     clock = sinon.useFakeTimers();
-    giraffeBlinkyDancer = new makeGiraffeDancer(10, 20, timeBetweenSteps);
+    giraffeBlinkyDancer = new GiraffeDancer(10, 20, timeBetweenSteps);
   });
 
   it('should have a jQuery $node object', function() {

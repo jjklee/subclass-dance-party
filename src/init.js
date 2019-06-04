@@ -62,7 +62,7 @@ $(document).ready(function() {
       dancers[i].$node.finish();
       var nextUpX = dancers[i + 1].$node.css('left');
       var nextUpY = dancers[i + 1].$node.css('top');
-      dancers[i].$node.animate({"left" : nextUpX, "top" : nextUpY}, 'slow');
+      dancers[i].$node.animate({'left': nextUpX, 'top': nextUpY}, 'slow');
     }
   });  
 });
