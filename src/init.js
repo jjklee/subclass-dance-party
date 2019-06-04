@@ -37,5 +37,10 @@ $(document).ready(function() {
       dancer.lineUp();
     });
   });
+
+  $('body').on('mouseenter', '.fadeDancer', function(event) {
+    $(this).attr('class', 'increaseSize dancer');
+  }); 
+    
 });
 

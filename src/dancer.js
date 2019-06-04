@@ -30,6 +30,7 @@ makeDancer.prototype.step = function() {
 };
 
 makeDancer.prototype.lineUp = function() {
+  this.$node.finish();
   this.$node.css( {
     left: 0
   });

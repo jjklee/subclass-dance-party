@@ -11,5 +11,4 @@ makeFadeDancer.prototype.step = function() {
   this.$node.fadeOut();
   this.$node.fadeIn();
 
-
 };
