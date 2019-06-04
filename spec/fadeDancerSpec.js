@@ -13,9 +13,9 @@ describe('fadeDancer', function() {
   });
 
   it('should have a step function that makes its node fade', function() {
-    sinon.spy(fadeDancer.$node, 'fade');
+    sinon.spy(fadeDancer.$node, 'fadeIn');
     fadeDancer.step();
-    expect(fadeDancer.$node.fadeOut.called).to.be.true;
+    expect(fadeDancer.$node.fadeIn.called).to.be.true;
   });
 
   describe('dance', function() {

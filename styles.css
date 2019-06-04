@@ -29,29 +29,41 @@ body, a:link, a:visited, a:active{
   font-weight: bold;
 }
 .dancer{
-  border:10px solid red;
+  border:10px solid blue;
   border-radius:10px;
   position:absolute;
 }
 .fadeDancer{
-  border:10px solid blue;
+  background: url('heart.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0;
+  position:absolute;
+  width:  50px;
+  height: 50px;
+}
+.giraffeDancer{
+  background: url('giraffe.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0;
+  position:absolute;
+  width:  100px;
+  height: 170px;
 }
 .animatedDancer{
   border:10px solid rgb(255, 0, 149);
   border-radius: 0px;
   animation:move 5s infinite;
 }
-
 #disco{
   text-align: center;
   z-index: -1;
 }
-
 .increaseSize{
-  border:100px solid blue;
-  border-radius:0px;
+  width:  300px;
+  height: 300px;
 }
-
 @-webkit-keyframes move{
   from {transform: rotate(0deg);}
   to {transform: rotate(360deg);}
